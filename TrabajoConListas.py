@@ -1,0 +1,12 @@
+trabajadores=["Ana","María","Antonio",15, True,"Miguel"] 
+print(trabajadores)
+print(trabajadores[2])
+print(trabajadores[-3])
+print(trabajadores[0:3])
+print(trabajadores[2:3])
+print(trabajadores[3:3])
+trabajadores.append("Carlos")
+print(len(trabajadores))
+print(trabajadores)
+trabajadores.pop()
+print(trabajadores)

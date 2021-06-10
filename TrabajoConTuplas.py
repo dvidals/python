@@ -1,0 +1,11 @@
+misDatos=("David", 11,5,1977,11)
+nombre,dia,mes,agno,dia2=misDatos
+misDatosLista=list(misDatos)
+misDatosTupla=tuple(misDatosLista)
+print(misDatos)
+print(misDatosTupla)
+print (13 in misDatosTupla)
+print (11 in misDatosTupla)
+print (misDatosTupla.count(11))
+print(len(misDatosTupla))
+print(agno)
