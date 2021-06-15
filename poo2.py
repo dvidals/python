@@ -5,7 +5,7 @@ class Persona():
     genero="sin definir"
 
     def __init__(self, nombre, apellido,genero):
-        self.nombre=nombre
+        self.__nombre=nombre
         self.apellido=apellido
         self.genero=genero
 
@@ -22,7 +22,7 @@ class Persona():
     def camina(self):
         return "La persona que se llama "+self.nombre+" está caminando"
     def getDatos(self):
-        return "Nombre: "+self.nombre+" Apellido: "+self.apellido+\
+        return "Nombre: "+self.__nombre+" Apellido: "+self.apellido+\
         " Edad: "+str(self.__edad)+" Género: "+self.genero
 
 """persona1=Persona()

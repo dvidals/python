@@ -7,7 +7,7 @@ class CuentaCorriente():
         self.NumeroCuenta=NumeroCuenta
         self.Titular=Titular
         self.Saldo=Saldo
-    def getter(self):
+    def getDatos(self):
         return "Nº de cuenta: "+self.NumeroCuenta+ ", Titular: "+self.Titular+\
             ", Saldo: "+str(self.Saldo)
     def ingresar(self, ingreso):
@@ -17,4 +17,4 @@ class CuentaCorriente():
 cuenta=CuentaCorriente("20800182123456789012", "David Vidal", 4700)
 cuenta.ingresar(1050)
 cuenta.retirar(450)
-print(cuenta.getter())
+print(cuenta.getDatos())
