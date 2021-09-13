@@ -17,6 +17,6 @@ miFrame.config(width="650", height="350") #El Frame está arriba y centrado, por
 #side: bottom, top, left, right
 #fill: x, y, both, none // para rellenar en uno de los ejes o no. El Frame se redimensiones en el eje que le digamos
 #expand:0,1 es necesario un 1 para que fill funcione en el eje de las y
-miFrame.config(relief="solid") #para darle un borde
+miFrame.config(relief="solid", bd=8) #para darle un borde
 
 raiz.mainloop() #para que la raíz esté siempre ejecutándose 

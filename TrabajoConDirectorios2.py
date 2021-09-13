@@ -1,8 +1,8 @@
 import os 
 import io 
 
-#os.makedirs("PruebaDirectorio2")
-"""os.chdir("PruebaDirectorio2") 
+"""os.makedirs("PruebaDirectorio2")
+os.chdir("PruebaDirectorio2") 
 archivo_externo=open("Ejemplo.txt","w+")
 archivo_externo.write("Primera frase del archivo creado \nSegunda frase del mismo archivo")
 archivo_externo=open("Ejemplo.docx","w+")

@@ -5,7 +5,7 @@ print("Crea una lista introduciendo 10 nombres.")
 def introduceNombre(valor):
    
     if valor in listaNombre:
-        raise ValueError
+        raise ValueError 
     return valor
 
 while(indice<10):

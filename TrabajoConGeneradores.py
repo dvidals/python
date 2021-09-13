@@ -13,4 +13,9 @@ print(next(capitales_devueltas))
 print(next(capitales_devueltas))
 print(next(capitales_devueltas))
 
+for i in capitales_devueltas:
+    print (i)
+
+
+
 
