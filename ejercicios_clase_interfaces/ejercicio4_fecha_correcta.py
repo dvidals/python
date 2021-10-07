@@ -6,20 +6,27 @@
 
 def fecha_correcta(n1,n2,n3):
     if n1<1 or n1>31 or n2<1 or n2>13:
-        "La fecha introducida no es correcta"
+       return "La fecha introducida no es correcta"
 
     elif (n2==11 or n2==4 or n2==6 or n2==9 or n2==2) and n1>30:
-        "La fecha introducida no es correcta"
+       return  "La fecha introducida no es correcta"
     
     elif n2==2 and n1>29:
-        "La fecha introducida no es correcta"
+       return  "La fecha introducida no es correcta"
+    
+    elif n2==2 and n3%4!=0 and n1>28:
+        return "La fecha introducida no es correcta"
 
-    elif n2==2 and 
+    elif n2==2 and (n3%4==0 and n3%100==0 and n3%400!=0) and n1>28:
+        return"La fecha introducida no es correcta"
+    else:
+        return "La fecha introducida es correcta"
+            
 
 #divisible entre 4
 # si además es divisible entre 100 tiene que ser divisible entre 400 para ser bisiesto:
 
-    if
+    
     
 
 try:
