@@ -11,12 +11,13 @@ def numero_veces(cadena,needle):
 
 
 a=input("Introduce la cadena con la que quieres trabajar: ")
+b=input("Introduce el caracter que quieres buscar: ");
+b=b.strip()
 
-try:
-    b=input("Introduce el caracter que quieres buscar: ")
+if  b.isnumeric()==False and len(b)==1:
     print(numero_veces(a,b))
-
-except:
+else:
+   print( "Introduce un único carácter y que no sea un número")
 
 
 
