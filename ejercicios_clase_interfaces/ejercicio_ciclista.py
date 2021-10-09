@@ -1,26 +1,34 @@
-import math
+
 def ciclista(h1,segundos):
     hora1=int(h1[0:2])
     minutos1=int(h1[3:5])
     segundos1=int(h1[6:8])
-    horas=math.ceil(segundos/3600)
-    horas_float=(segundos/3600)
+    segundos_totales_iniciales=hora1*3600+minutos1*60+segundos1
 
-    minutos=math.ceil(60*(horas_float-horas))
+    segundos_totales=segundos_totales_iniciales+segundos
+
+    horas=int(segundos_totales/3600)
+
+    horas_float=(segundos_totales/3600)
+
+    
+
+    minutos=int(60*(horas_float-horas))
+   
 
     minutos_float=(60*(horas_float-horas))
+    
 
-    segundos=math.ceil(60*(minutos_float-minutos))
+    segundos=round(60*(minutos_float-minutos))
 
-    horas_finales=hora1+horas
-    minutos_finales=minutos+minutos1
-    segundos_finales=segundos1+segundos
-    if minutos_finales<10:
-        minutos_finales="0"+str(minutos_finales)
-    if segundos_finales<10:
-        segundos_finales="0"+str(segundos_finales)
+    
+   
+    if minutos<10:
+        minutos="0"+str(minutos)
+    if segundos<10:
+        segundos="0"+str(segundos)
 
-    return str(horas_finales)+":"+str(minutos_finales)+":"+str(segundos_finales)
+    return str(horas)+":"+str(minutos)+":"+str(segundos)
 print(ciclista('14:35:50',3600))
 print(ciclista('14:35:50',7200))
 print(ciclista('14:35:50',1800))

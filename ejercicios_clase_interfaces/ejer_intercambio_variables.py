@@ -1,10 +1,12 @@
-def intercambio_variables(a,b):
+def intercambio_variables():
+    a=input("Introduce el valor de la variable A: ")
+    b=input("Introduce el valor de la variable B: ")
     c=a
-    a="El valor de la variable a es:",b
-    b="y el valor de b es:",c
-    return a,b
+    print("El valor de la variable A ahora es: "+str(b))
+    print("y el valor de B ahora es: "+str(c))
+   
+    
+intercambio_variables()
 
-variable1=float(input("Introduce la  variable A:"))
-variable2=float(input("Introduce la variable B:"))
 
-print(intercambio_variables(variable1,variable2))
+
