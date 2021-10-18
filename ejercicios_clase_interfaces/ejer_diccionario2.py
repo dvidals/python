@@ -12,7 +12,6 @@ def precio_frutas():
         if fruta in frutas:
             try:
                 kilos=float(input("¿Cuántos kilos quieres?: "))
-
                 print(frutas[fruta]*kilos)
                 bandera2=True
                 while bandera2:
@@ -25,7 +24,6 @@ def precio_frutas():
                     elif seguir=="si":
                         bandera2=False        
             except:
-
                 print("Tienes que introducir un valor numérico")
         else: 
             print("Esa fruta no la tenemos disponible")
