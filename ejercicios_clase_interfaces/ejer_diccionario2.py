@@ -9,17 +9,21 @@ def precio_frutas():
     bandera=True
     while bandera:
         fruta=input("¿Qué fruta quieres comprar?: ")
-        #print(fruta)
         if fruta in frutas:
             try:
                 kilos=float(input("¿Cuántos kilos quieres?: "))
 
                 print(frutas[fruta]*kilos)
-                seguir=input("¿Quieres hacer otra consulta? Si/No: ")
-                seguir=seguir.lower()
-                if seguir=="no":
-                    bandera=False
-                    break
+                bandera2=True
+                while bandera2:
+                    seguir=input("¿Quieres hacer otra consulta? Si/No: ")
+                    seguir=seguir.lower()
+                    if seguir=="no":
+                        bandera=False
+                        bandera2=False
+                        break
+                    elif seguir=="si":
+                        bandera2=False        
             except:
 
                 print("Tienes que introducir un valor numérico")
