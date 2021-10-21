@@ -6,12 +6,15 @@ Tras cada consulta el programa nos preguntará si queremos hacer otra consulta."
 
 def precio_frutas():
     frutas={'pera':1.99,'manzana':2.55,'naranja':1.69,'mandarina':3.29,'uva':2.56,'ciruela':4.05,'pomelo':3.29}
+    total=0
     bandera=True
     while bandera:
         fruta=input("¿Qué fruta quieres comprar?: ")
+        fruta=fruta.lower
         if fruta in frutas:
             try:
                 kilos=float(input("¿Cuántos kilos quieres?: "))
+                total=total+(frutas[fruta]*kilos)
                 print(frutas[fruta]*kilos)
                 bandera2=True
                 while bandera2:
@@ -20,6 +23,7 @@ def precio_frutas():
                     if seguir=="no":
                         bandera=False
                         bandera2=False
+                        print("El total de lo que has comprado suma "+str(total)+" euros")
                         break
                     elif seguir=="si":
                         bandera2=False        
@@ -28,6 +32,7 @@ def precio_frutas():
         else: 
             print("Esa fruta no la tenemos disponible")
             break
+    #return print("El total de lo que has comprado suma "+str(total)+" euros")
 
 
 precio_frutas()
