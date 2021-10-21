@@ -7,6 +7,7 @@ siguientes subrutinas:
  DiasDelMes: Recibe un mes y un año y nos dice los días de ese mes en ese año.
  EsBisiesto: Recibe un año y nos dice si es bisiesto.
  Calcular_Dia_Juliano: recibe una fecha y nos devuelve el día juliano."""
+from datetime import datetime
 
 def leer_fecha():
     try:
@@ -76,8 +77,13 @@ def es_bisiesto():
 
 def calcular_dia_juliano():
     dia,mes,anho=leer_fecha()
+    d1=str(anho)+'-01-01'
+    d2=str(anho)+'-'+str(mes)+'-'+str(dia)
+    d1 = datetime.strptime(d1, "%Y-%m-%d")
+    d2 = datetime.strptime(d2, "%Y-%m-%d")
+    return abs((d2 - d1).days)
 
    
-
+print (calcular_dia_juliano())
 
     
