@@ -13,13 +13,30 @@ def leer_fecha():
         n1=int(input("Introduce un día del mes: "))
         n2=int(input ("Introduce un mes de en formato numérico, 1 para Enero y 12 para diciembre: "))
         n3=int(input ("Introduce un año: "))
+
+        if n1<1 or n1>31 or n2<1 or n2>13:
+            return "La fecha introducida no es correcta"
+
+        elif (n2==11 or n2==4 or n2==6 or n2==9 or n2==2) and n1>30:
+            return  "La fecha introducida no es correcta"
+    
+        elif n2==2 and n1>29:
+            return  "La fecha introducida no es correcta"
+    
+        elif n2==2 and n3%4!=0 and n1>28:
+            return "La fecha introducida no es correcta"
+
+        elif n2==2 and (n3%4==0 and n3%100==0 and n3%400!=0) and n1>28:
+            return"La fecha introducida no es correcta"
+        else:
+            #return "La fecha introducida es correcta"
+            return n1,n2,n3
+
+
     except:
         "Sólo se admiten enteros"
     
-    return n1,n2,n3
-
-
-
+    #return n1,n2,n3
 
 
 
@@ -40,7 +57,7 @@ def dias_del_mes():
         else:
             n1=28
     else:
-        print("Los meses van del 1 al 12")
+        print("Los meses sólo van del 1 al 12")
         exit()
     print ("Los días de ese mes en ese año son "+ str(n1))
     return n1
@@ -59,6 +76,7 @@ def es_bisiesto():
 
 def calcular_dia_juliano():
     dia,mes,anho=leer_fecha()
+
    
 
 
