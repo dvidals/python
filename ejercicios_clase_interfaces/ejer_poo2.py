@@ -11,10 +11,7 @@ negativa, no se hará nada.
 • retirar(cantidad): se retira una cantidad a la cuenta. La cuenta puede estar en números
 rojos."""
 
-from ejer_poo1 import persona
-
-
-class cuenta(persona):
+class cuenta():
 
     def __init__(self,titular,cantidad=0):
         self.titular=titular

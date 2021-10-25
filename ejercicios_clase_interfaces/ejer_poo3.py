@@ -29,7 +29,7 @@ class cuenta_joven(cuenta):
         self.__bonificacion=bonificacion
 
     def mostrar(self):
-        return "Cuenta Joven\n"+"Titular:"+self.titular.mostrar()+" - Cantidad:"+str(self.cantidad)+ "- Bonificación:"+str(self.bonificacion)+"%"
+        return "Cuenta Joven\n"+"Titular: "+self.titular.mostrar()+" - Cantidad:"+str(self.cantidad)+ "- Bonificación:"+str(self.bonificacion)+"%"
    
     def es_titular_valido(self):
         return self.titular.edad < 25 and self.titular.es_mayor_de_edad()
@@ -56,5 +56,5 @@ print(p3.bonificacion)
 print(p3.es_titular_valido())
 p3.retirar(400)
 print(p3.cantidad)
-p3.ingresar(600)
+p3.ingresar(700)
 print(p3.cantidad)
