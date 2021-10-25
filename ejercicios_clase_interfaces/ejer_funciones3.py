@@ -44,7 +44,10 @@ def leer_fecha():
 def dias_del_mes():
     treinta=[11,4,6,9]
     treinta_y_uno=[1,3,5,7,8,10,12]
-    dia,mes,anho=leer_fecha()
+    try:
+        dia,mes,anho=leer_fecha()
+    except:
+        print("Los valores introducidos no son correctos")
     if mes in treinta:
         n1=30
     elif mes in treinta_y_uno:
@@ -76,13 +79,17 @@ def es_bisiesto():
         print ("El año "+str(anho)+" no es bisiesto")
 
 def calcular_dia_juliano():
-    dia,mes,anho=leer_fecha()
-    d1=str(anho)+'-01-01'
-    d2=str(anho)+'-'+str(mes)+'-'+str(dia)
-    d1 = datetime.strptime(d1, "%Y-%m-%d")
-    d2 = datetime.strptime(d2, "%Y-%m-%d")
-    return abs((d2 - d1).days)
+    try:
+        dia,mes,anho=leer_fecha()
+        d1=str(anho)+'-01-01'
+        d2=str(anho)+'-'+str(mes)+'-'+str(dia)
+        d1 = datetime.strptime(d1, "%Y-%m-%d")
+        d2 = datetime.strptime(d2, "%Y-%m-%d")
+        resultado= abs((d2 - d1).days)
+    except:
+        resultado="Los valores introducidos no son correctos"
 
+    return resultado
    
 print (calcular_dia_juliano())
 
