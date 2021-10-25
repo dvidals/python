@@ -8,7 +8,7 @@ datos.
 • esMayorDeEdad(): Devuelve un valor lógico indicando si es mayor de edad.
 """
 
-class Persona():
+class persona():
     def __init__(self,nombre="",edad=0,dni=""):
         self.nombre=nombre
         self.edad=edad
@@ -27,8 +27,8 @@ class Persona():
     def nombre(self,nombre):
         self.__nombre=nombre
     @edad.setter
-    def nombre(self,edad):
-        if edad < 0 or edad>110:
+    def edad(self,edad):
+        if edad < 0 or edad > 110:
             print("Edad incorrecta")
             self.__edad=0
         else:
@@ -54,8 +54,9 @@ class Persona():
         self.validar_dni()
     
     def mostrar(self):
-        return "Los datos de la persona son los siguientes: "+self.nombre+", "+self.edad+"años  y DNI: "+self.dni
+        return self.nombre+", "+str(self.edad)+"años  y DNI: "+self.dni
     def es_mayor_de_edad(self):
+        #return self.edad>=18
         if self.edad>=18:
             return True
         else:
