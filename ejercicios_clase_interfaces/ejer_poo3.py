@@ -19,6 +19,15 @@ class cuenta_joven(cuenta):
     def __init__(self,titular,cantidad=0,bonificacion=0):
         super().__init__(titular,cantidad)
         self.bonificacion=bonificacion
+        if self.titular.edad<18 or self.titular.edad>=25:
+            print ("El titular no es válido") 
+            self.titular.nombre=""
+            self.titular.edad=0
+            self.titular.dni=""
+            cuenta.cantidad=0
+            self.bonificacion=0
+            return
+        
     
     @property
     def bonificacion(self):
@@ -47,7 +56,7 @@ class cuenta_joven(cuenta):
             super().ingresar(cantidad)
 
 
-p1=persona("David",24,"36128619N")
+p1=persona("David",18,"36128619N")
 p2=cuenta(p1,3000)
 p3=cuenta_joven(p1,p2.cantidad,10)
 print(p3.mostrar())

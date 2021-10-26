@@ -10,12 +10,17 @@ directamente, solo ingresando o retirando dinero.
 negativa, no se hará nada.
 • retirar(cantidad): se retira una cantidad a la cuenta. La cuenta puede estar en números
 rojos."""
-
+from ejer_poo1 import persona
 class cuenta():
 
     def __init__(self,titular,cantidad=0):
-        self.titular=titular
+        
+        self.titular=titular 
         self.__cantidad=cantidad
+        if self.titular.edad<18:
+            self.titular.edad=0
+            print("El titular de una cuenta tiene que ser mayor de edad")
+        
     
     @property
     def titular(self):
@@ -31,12 +36,22 @@ class cuenta():
 
        
     def mostrar(self):
-        return "Cuenta\n"+"Titular:"+self.titular.mostrar()+" - Cantidad:"+str(self.cantidad)
+        if self.titular.es_mayor_de_edad():
+            return "Cuenta\n"+"Titular:"+self.titular.mostrar()+" - Cantidad:"+str(self.cantidad)
     
-    def ingresar(self,cantidad):
-        if cantidad > 0:
-            self.__cantidad = self.__cantidad + cantidad
+    def ingresar(self,ingreso):
+        if ingreso > 0:
+            self.__cantidad = self.__cantidad + ingreso
     
-    def retirar(self,cantidad):
-        if cantidad > 0:
-            self.__cantidad = self.__cantidad - cantidad
+    def retirar(self,retiro):
+        if retiro > 0:
+            self.__cantidad = self.__cantidad - retiro
+    
+p1=persona("Katia",17,"36128618B")
+print(p1.mostrar())
+c1=cuenta(p1,3000)
+print(c1.mostrar())
+c1.ingresar(300)
+print(c1.mostrar())
+
+

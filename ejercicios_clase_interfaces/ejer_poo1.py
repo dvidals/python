@@ -54,11 +54,11 @@ class persona():
         self.validar_dni()
     
     def mostrar(self):
-        return self.nombre+", "+str(self.edad)+"años  y DNI: "+self.dni
+        return self.nombre+", "+str(self.edad)+" años  y DNI: "+self.dni
     def es_mayor_de_edad(self):
-        #return self.edad>=18
-        if self.edad>=18:
+        return self.edad>=18
+        """if self.edad>=18:
             return True
         else:
-            return False
+            return False"""
     
