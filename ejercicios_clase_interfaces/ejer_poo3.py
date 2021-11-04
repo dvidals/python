@@ -20,7 +20,10 @@ class cuenta_joven(cuenta):
         super().__init__(titular,cantidad)
         self.bonificacion=bonificacion
         if self.titular.edad<18 or self.titular.edad>=25:
-            print ("El titular no es válido") 
+            if self.titular.edad>=25:
+                print ("El titular no es válido por no tener una edad inferior a 25 años") 
+            else:
+                 print ("El titular no es válido") 
             self.titular.nombre=""
             self.titular.edad=0
             self.titular.dni=""
