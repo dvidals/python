@@ -61,12 +61,31 @@ p2=cuenta(p1new,3000)
 p3=cuenta_joven(p1new,p2.cantidad,10)
 print(p3.mostrar())
 
+print(p3.cantidad)
+print(p3.bonificacion)
+print(p3.es_titular_valido())
+p3.retirar(400)
+print(p3.cantidad)
+p3.ingresar(700)
+print(p3.cantidad)
+
+
+
 print("----------------------------------------------------------")
 
 p1new=persona("David",28,"36128619N")
 p2=cuenta(p1new,3000)
 p3=cuenta_joven(p1new,p2.cantidad,10)
 print(p3.mostrar())
+
+print(p3.cantidad)
+print(p3.bonificacion)
+print(p3.es_titular_valido())
+p3.retirar(400)
+print(p3.cantidad)
+p3.ingresar(700)
+print(p3.cantidad)
+
 
 print("----------------------------------------------------------")
 
@@ -78,10 +97,10 @@ print(p3.mostrar())
 
 
 
-"""print(p3.cantidad)
+print(p3.cantidad)
 print(p3.bonificacion)
 print(p3.es_titular_valido())
 p3.retirar(400)
 print(p3.cantidad)
 p3.ingresar(700)
-print(p3.cantidad)"""
+print(p3.cantidad)
