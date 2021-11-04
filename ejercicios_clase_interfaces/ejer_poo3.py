@@ -55,15 +55,33 @@ class cuenta_joven(cuenta):
         elif cantidad > 0:
             super().ingresar(cantidad)
 
-
-p1=persona("David",18,"36128619N")
-p2=cuenta(p1,3000)
-p3=cuenta_joven(p1,p2.cantidad,10)
+print("----------------------------------------------------------")
+p1new=persona("David",18,"36128619N")
+p2=cuenta(p1new,3000)
+p3=cuenta_joven(p1new,p2.cantidad,10)
 print(p3.mostrar())
-print(p3.cantidad)
+
+print("----------------------------------------------------------")
+
+p1new=persona("David",28,"36128619N")
+p2=cuenta(p1new,3000)
+p3=cuenta_joven(p1new,p2.cantidad,10)
+print(p3.mostrar())
+
+print("----------------------------------------------------------")
+
+p1new=persona("David",16,"36128619N")
+p2=cuenta(p1new,3000,1) #La añado el 1 (es la bandera) para que no me imprima dos veces la frase "El titular tiene que ser mayor de edad".
+p3=cuenta_joven(p1new,p2.cantidad,10)
+print(p3.mostrar())
+
+
+
+
+"""print(p3.cantidad)
 print(p3.bonificacion)
 print(p3.es_titular_valido())
 p3.retirar(400)
 print(p3.cantidad)
 p3.ingresar(700)
-print(p3.cantidad)
+print(p3.cantidad)"""

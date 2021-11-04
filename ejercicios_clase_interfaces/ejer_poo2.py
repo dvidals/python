@@ -13,11 +13,11 @@ rojos."""
 from ejer_poo1 import persona
 class cuenta():
 
-    def __init__(self,titular,cantidad=0):
-        
+    def __init__(self,titular,cantidad=0,bandera=0):
+        self.bandera=bandera #La añado para controlar la ejecución del print. 
         self.titular=titular 
         self.__cantidad=cantidad
-        if self.titular.edad<18:
+        if self.titular.edad<18 and bandera==0:
             self.titular.edad=0
             print("El titular de una cuenta tiene que ser mayor de edad")
         
@@ -47,11 +47,11 @@ class cuenta():
         if retiro > 0:
             self.__cantidad = self.__cantidad - retiro
     
-p1=persona("Katia",17,"36128618B")
+"""p1=persona("Katia",19,"36128618B")
 print(p1.mostrar())
 c1=cuenta(p1,3000)
 print(c1.mostrar())
 c1.ingresar(300)
-print(c1.mostrar())
+print(c1.mostrar())"""
 
 
